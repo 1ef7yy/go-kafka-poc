@@ -14,7 +14,7 @@ func main() {
 
 	logger.Info("starting server...")
 
-	view := view.NewView(logger)
+	view := view.NewView()
 
 	logger.Info("initializing router...")
 

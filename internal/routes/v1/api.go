@@ -8,7 +8,8 @@ func (v *Router) ApiEndpoint() http.Handler {
 
 	apimux := http.NewServeMux()
 
-	apimux.Handle("GET /some_endpoint", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	apimux.Handle("GET /ping", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusNoContent)
 	}))
 
 	return http.StripPrefix("/api", apimux)
