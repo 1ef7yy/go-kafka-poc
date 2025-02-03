@@ -12,6 +12,7 @@ func InitRouter(view view.View) *http.ServeMux {
 	v1 := v1.NewRouter(view)
 
 	mux.Handle("/api/", v1.Api())
+	mux.Handle("/api/validation/", v1.Validation())
 
 	return mux
 }

@@ -11,7 +11,7 @@ type log struct {
 func newZap(outputs []string) log {
 	cfg := zap.NewDevelopmentConfig()
 
-	cfg.Encoding = "json"
+	cfg.Encoding = "console"
 	if outputs != nil {
 		cfg.OutputPaths = outputs
 	}

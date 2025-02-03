@@ -9,6 +9,8 @@ import (
 )
 
 type Domain interface {
+	NormalizePhone(phone string) (string, error)
+	ValidatePhone(phone string) (bool, error)
 }
 
 type domain struct {
